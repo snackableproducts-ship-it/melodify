@@ -10,6 +10,21 @@ base {
     archivesName = project.archives_base_name
 }
 
+// The source files in this repository are currently stored in the project root.
+// Point Gradle at those files so they are compiled and packaged.
+sourceSets {
+    main {
+        java {
+            srcDirs = ['.']
+            include '*.java'
+        }
+        resources {
+            srcDirs = ['.']
+            include 'fabric.mod.json', 'en_us.json'
+        }
+    }
+}
+
 repositories {
     // Fabric / Minecraft artifacts are resolved through the Loom plugin's own repositories.
 }
