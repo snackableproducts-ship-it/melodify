@@ -4,7 +4,7 @@
   "version": "${version}",
   "name": "Melodify",
   "description": "Shows synchronized lyrics for the song playing in Spotify directly on your Minecraft screen.",
-  "authors": ["Melodify"],
+  "authors": ["MalekXMine"],
   "license": "MIT",
   "environment": "client",
   "entrypoints": {
