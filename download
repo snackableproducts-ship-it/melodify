@@ -1,0 +1,19 @@
+# Gradle / build output
+.gradle/
+build/
+out/
+run/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# Secrets - never commit these. (Melodify keeps its settings and login in your Minecraft
+# config folder, outside this repository, so nothing secret is ever written here.)
+spotify-tokens.json
+*.token
+.env
