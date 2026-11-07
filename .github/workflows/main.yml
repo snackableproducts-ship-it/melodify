@@ -1,4 +1,3 @@
-
 name: Build Melodify
 
 on:
@@ -19,11 +18,13 @@ jobs:
           distribution: temurin
           java-version: 21
 
-      - name: Make Gradle executable
-        run: chmod +x gradlew
+      - name: Install Gradle 9.2.1
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '9.2.1'
 
       - name: Build Minecraft mod
-        run: ./gradlew build --no-daemon
+        run: gradle build --no-daemon
 
       - name: Upload JAR
         uses: actions/upload-artifact@v4
